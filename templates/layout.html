@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <!-- Simple styling for usability (optional) -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f7fafc;
+        }
+        h1, h3 { color: #154360; }
+        div { margin-bottom: 1em; }
+        a { color: #2874A6; text-decoration: none; }
+        .flash { color: #b04632; }
+    </style>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash">
+            {% for message in messages %}
+                <div>{{ message }}</div>
+            {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

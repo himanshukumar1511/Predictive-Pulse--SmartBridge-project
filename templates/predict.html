@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="" method="post">
+    {{ form.hidden_tag() }}
+
+    <div>
+        {{ form.Gender.label }}
+        {{ form.Gender }}
+        {% if form.Gender.errors %}
+            {% for error in form.Gender.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+
+    <div>
+        {{ form.Age.label }}
+        {{ form.Age }}
+        {% if form.Age.errors %}
+            {% for error in form.Age.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    
+    <div>
+        {{ form.History.label }}
+        {{ form.History }}
+        {% if form.History.errors %}
+            {% for error in form.History.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.Patient.label }}
+        {{ form.Patient }}
+        {% if form.Patient.errors %}
+            {% for error in form.Patient.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.TakeMedication.label }}
+        {{ form.TakeMedication }}
+        {% if form.TakeMedication.errors %}
+            {% for error in form.TakeMedication.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.Severity.label }}
+        {{ form.Severity }}
+        {% if form.Severity.errors %}
+            {% for error in form.Severity.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.BreathShortness.label }}
+        {{ form.BreathShortness }}
+        {% if form.BreathShortness.errors %}
+            {% for error in form.BreathShortness.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.VisualChanges.label }}
+        {{ form.VisualChanges }}
+        {% if form.VisualChanges.errors %}
+            {% for error in form.VisualChanges.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.NoseBleeding.label }}
+        {{ form.NoseBleeding }}
+        {% if form.NoseBleeding.errors %}
+            {% for error in form.NoseBleeding.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.Whendiagnoused.label }}
+        {{ form.Whendiagnoused }}
+        {% if form.Whendiagnoused.errors %}
+            {% for error in form.Whendiagnoused.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.Systolic.label }}
+        {{ form.Systolic }}
+        {% if form.Systolic.errors %}
+            {% for error in form.Systolic.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.Diastolic.label }}
+        {{ form.Diastolic }}
+        {% if form.Diastolic.errors %}
+            {% for error in form.Diastolic.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>
+        {{ form.ControlledDiet.label }}
+        {{ form.ControlledDiet }}
+        {% if form.ControlledDiet.errors %}
+            {% for error in form.ControlledDiet.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <br>
+    <div>{{ form.submit() }}</div>
+    <br>
+    <div>
+        {{ output }}
+    </div>
+    <br>
+    <div>
+        <p>Redirect to Homepage? <a href="{{ url_for('home') }}">Home</a></p>
+    </div>
+</form>
+{% endblock content %}

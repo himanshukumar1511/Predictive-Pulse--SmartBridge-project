@@ -36,11 +36,27 @@ def predict():
             Diastolic=[form.Diastolic.data],
             ControlledDiet=[form.ControlledDiet.data]
         ))
+
+        # ✅ Predict
         prediction = model.predict(x_new)[0]
-        message = f"The predicted hypertension stage is: {prediction}"
+
+        # ✅ Map numeric prediction to stage label
+        stage_map = {
+            0: "NORMAL",
+            1: "HYPERTENSION (Stage-1)",
+            2: "HYPERTENSION (Stage-2)",
+            3: "HYPERTENSIVE CRISIS"
+        }
+
+        stage_label = stage_map.get(prediction, "Unknown")
+
+        # ✅ Final message
+        message = f"Based on the provided details, your blood pressure stage is {stage_label}."
     else:
         message = "Please provide valid input details!"
+
     return render_template("predict.html", title="Predict", form=form, output=message)
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=10000)

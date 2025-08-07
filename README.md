@@ -63,18 +63,16 @@ Predictive Pulse is a machine learning project for classifying hypertension stag
 
 ## Screenshots
 
-*Add screenshots of your notebook outputs and Flask web form here if available.*
+ - **Home Page**
+<img width="1918" height="1027" alt="image" src="https://github.com/user-attachments/assets/4a4cf3a9-a0ab-4a93-ae69-d6337fe6c8db" />
+<br><br>
+
+ - **Prediction Page**
+<img width="1912" height="1027" alt="image" src="https://github.com/user-attachments/assets/f772dfda-8ba8-4a35-a95a-2c76b7efe8c1" />
 
 ---
 
-## Contribution Guidelines
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes.
-4. Push to your branch and open a pull request.
-
----
 
 ## License
 

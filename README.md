@@ -1,7 +1,7 @@
 # Predictive Pulse
 
 ## Short Description
-Predictive Pulse is a machine learning project for classifying hypertension stages based on patient data. It includes data analysis, model training, evaluation, and a Flask web app for interactive predictions.
+Predictive Pulse is a machine learning project focused on classifying hypertension stages using patient data. It begins with detailed data analysis to recognize important patterns. Then, predictive models are developed and refined for accuracy during model training and evaluation. Finally, a user-friendly Flask web app is created to allow interactive predictions, helping healthcare providers monitor and manage hypertension stages effectively.
 
 ---
 
